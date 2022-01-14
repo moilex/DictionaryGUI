@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DictionaryGUI.iml" filepath="$PROJECT_DIR$/DictionaryGUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ExamWords/ExamWords.iml" filepath="$PROJECT_DIR$/ExamWords/ExamWords.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FileController/FileController.iml" filepath="$PROJECT_DIR$/FileController/FileController.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RecAndReadFile/RecAndReadFile.iml" filepath="$PROJECT_DIR$/RecAndReadFile/RecAndReadFile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WordsStorage/WordsStorage.iml" filepath="$PROJECT_DIR$/WordsStorage/WordsStorage.iml" />
+    </modules>
+  </component>
+</project>
