@@ -1,26 +1,16 @@
 package dictionary.examwords;
 
 import dictionary.wordsstorage.WordsStorage;
-
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 
 public class ExamWords {
     private String[] engWords;
     private String[] rusWords;
-    private WordsStorage wo;
-    private Random random = new Random();
     private HashMap<String, String> dictionary;
     private int randomNum;
-    private int newRandomNum;
-    private int secNum;
-
 
 
     public ExamWords(WordsStorage wo){
-        this.wo = wo;
         this.dictionary = wo.getDictionary();
         putWords();
     }
@@ -37,7 +27,7 @@ public class ExamWords {
     }
 
     public String checkWord(){
-        randomNum = random.nextInt(engWords.length - 1);
+        randomNum = (int)(Math.random() * (engWords.length - 1));
         return rusWords[randomNum];
     }
     public String trueWord(){
@@ -45,16 +35,15 @@ public class ExamWords {
     }
 
     public String falseWords(){
-        newRandomNum = random.nextInt(engWords.length - 1);
+        int newRandomNum = (int)(Math.random() * (engWords.length - 1));
         if(newRandomNum == randomNum){
-            newRandomNum = random.nextInt(engWords.length - 1);
+            newRandomNum = (int)(Math.random() * (engWords.length - 1));
         }
         return engWords[newRandomNum];
     }
 
     public int getNumRandom(){
-        int i = random.nextInt(4);
-        return i;
+        return (int)(Math.random() * 4);
     }
 
 }

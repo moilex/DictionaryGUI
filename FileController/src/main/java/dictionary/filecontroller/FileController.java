@@ -7,7 +7,7 @@ public class FileController {
     private File wordsFile;
     private final String nameUser = System.getProperty("user.name");
     private String pathForCreate;
-    private final String OS =System.getProperty("os.name").replaceAll("\\d", "");
+    private final String OS =System.getProperty("os.name");
 
     public FileController(){
         this.pathForCreate = createPath();
@@ -25,13 +25,9 @@ public class FileController {
         }
     }
 
-    public String getNameUser() {
-        return nameUser;
-    }
-
     public String createPath() {
-        if (OS.equals("Windows ")) {
-            pathForCreate = "C:\\Users\\" + nameUser + "\\MyDictionary";
+        if (OS.contains("Windows")) {
+            pathForCreate = "C:\\Users\\" + "Александр" + "\\MyDictionary";
         }else{
             pathForCreate = "Users\\" + nameUser + "\\MyDictionary";
         }

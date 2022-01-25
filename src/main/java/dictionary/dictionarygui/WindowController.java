@@ -117,7 +117,7 @@ public class WindowController {
         }
     }
 
-    public void choiceFirst() throws InterruptedException {
+    public void choiceFirst(){
         if(checkWord.getText().equals(wo.getDictionary().get(firstOp.getText()))) {
             wordSet();
         }
@@ -125,21 +125,21 @@ public class WindowController {
             visiblePic(errorChoice);
         }
     }
-    public void choiceSecond() throws InterruptedException {
+    public void choiceSecond(){
         if(checkWord.getText().equals(wo.getDictionary().get(secondOp.getText()))) {
             wordSet();
         }else{
             visiblePic(errorChoice);
         }
     }
-    public void choiceThird() throws InterruptedException {
+    public void choiceThird(){
         if(checkWord.getText().equals(wo.getDictionary().get(thirdOp.getText()))) {
             wordSet();
         }else{
             visiblePic(errorChoice);
         }
     }
-    public void choiceFourth() throws InterruptedException {
+    public void choiceFourth(){
         if(checkWord.getText().equals(wo.getDictionary().get(fourthOp.getText()))) {
             wordSet();
         }else{
@@ -148,15 +148,12 @@ public class WindowController {
     }
     public void visiblePic(ImageView img){
         img.setVisible(true);
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(1500);
-                    img.setVisible(false);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+        new Thread(()->{
+            try{
+                Thread.sleep(1500);
+                img.setVisible(false);
+            }catch (InterruptedException e){
+                e.printStackTrace();
             }
         }).start();
     }
