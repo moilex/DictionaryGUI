@@ -27,7 +27,7 @@ public class FileController {
 
     public String createPath() {
         if (OS.contains("Windows")) {
-            pathForCreate = "C:\\Users\\" + "Александр" + "\\MyDictionary";
+            pathForCreate = "C:\\Users\\" + nameUser + "\\MyDictionary";
         }else{
             pathForCreate = "Users\\" + nameUser + "\\MyDictionary";
         }
